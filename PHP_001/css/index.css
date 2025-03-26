@@ -1,0 +1,261 @@
+        /* 沿用之前的背景和基础样式 */
+        :root {
+            --primary-color: #00f3ff;
+            --hover-color: #0066ff;
+            --background: #0a0e29;
+            --sidebar-width: 260px;
+        }
+
+        /* 先前定义的背景动画和粒子效果保持相同 */
+
+        /* 侧边栏样式 */
+        .admin-sidebar {
+            width: var(--sidebar-width);
+            height: 100vh;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-right: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 2rem 1.5rem;
+            position: fixed;
+            left: 0;
+            top: 0;
+            z-index: 2;
+            overflow: hidden;
+        }
+
+        .user-panel {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .user-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin: 0 auto 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: white;
+        }
+
+        .admin-menu {
+            list-style: none;
+        }
+
+        .menu-item {
+            margin: 0.8rem 0;
+        }
+
+        .menu-item a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            padding: 0.8rem 1rem;
+            border-radius: 8px;
+            display: block;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .menu-item a:hover {
+            background: rgba(0, 243, 255, 0.1);
+            color: var(--primary-color);
+        }
+
+        /* 主内容区 */
+        .admin-main {
+            margin-left: var(--sidebar-width);
+            padding: 2rem;
+            min-height: 100vh;
+            position: relative;
+            z-index: 1;
+            overflow-y: auto;  /* 新增滚动设置 */
+            height: 100vh;     /* 固定高度 */
+            box-sizing: border-box; /* 确保padding不影响高度 */
+        }
+
+        /* 用户详情卡片 */
+        .detail-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 1rem;
+            padding: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            margin-bottom: 2rem;
+        }
+
+        .card-header {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .card-header h2 {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+        }
+
+        .info-item {
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 8px;
+        }
+
+        .info-label {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .info-content {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1rem;
+        }
+
+        /* 用户列表表格 */
+        .user-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .user-table th,
+        .user-table td {
+            padding: 1.2rem;
+            text-align: left;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .user-table th {
+            background: rgba(0, 243, 255, 0.1);
+            color: var(--primary-color);
+        }
+
+        .user-table tr:hover {
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        /* 分页样式 */
+        .pagination {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-top: 2rem;
+        }
+
+        .page-item {
+            padding: 0.5rem 1rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .page-item:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .page-item.active {
+            background: linear-gradient(45deg, var(--primary-color), var(--hover-color));
+            color: white;
+        }
+
+        /* 操作按钮 */
+        .action-buttons {
+            margin-top: 2rem;
+            display: flex;
+            gap: 1rem;
+        }
+
+        .btn {
+            padding: 0.8rem 1.5rem;
+            border-radius: 6px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        :root {
+            --primary-color: #00f3ff;
+            --hover-color: #0066ff;
+            --background: #0a0e29;
+            --sidebar-width: 260px;
+        }
+
+        .admin-menu {
+            margin-top: 2rem;
+        }
+
+        /* 主内容区调整 */
+        .admin-main {
+            padding: 2rem;
+        }
+
+        /* 用户详情页优化 */
+        .detail-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* 新增编辑按钮 */
+        .edit-btn {
+            background: rgba(0, 243, 255, 0.1);
+            color: var(--primary-color);
+            border: 1px solid var(--primary-color);
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .edit-btn:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        /* 文字颜色调整 */
+        .info-content,
+        .user-table td {
+            color: rgba(255, 255, 255, 0.9); /* 提高文字对比度 */
+        }
+
+        .info-label {
+            color: var(--primary-color);
+        }
+
+        /* 表格优化 */
+        .user-table th,
+        .user-table td {
+            padding: 1rem;
+        }
+
+        /* 移除操作列 */
+        .user-table th:last-child,
+        .user-table td:last-child {
+            display: none;
+        }
