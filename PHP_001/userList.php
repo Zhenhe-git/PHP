@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>问卷管理系统 - 用户列表</title>
+    <link rel="stylesheet" type="text/css" href="css/mousetailing.css"/>
     <link rel="stylesheet" type="text/css" href="css/login.css"/>
     <link rel="stylesheet" type="text/css" href="css/index.css"/>
     <link rel="stylesheet" type="text/css" href="css/userlist.css"/>
     <link rel="stylesheet" type="text/css" href="css/userlist+.css"/>
 </head>
 <body>
+    <canvas id="trailCanvas"></canvas>
 
     <?php include_once "public/background.php"; ?>
 
@@ -90,6 +92,7 @@
 
     </main>
 
+    <script src="js/mousetailing.js" type="text/javascript" charset="utf-8"></script>
     <script src="js/background.js" type="text/javascript" charset="utf-8"></script>
 
 </body>
