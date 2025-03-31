@@ -1,4 +1,6 @@
 <?php 
+    session_start();
+    
     $u=$_POST['login_name'];
     $p=$_POST['login_password'];
 
@@ -7,15 +9,25 @@
     $sql="select * from admin where user_name='$u' and password=md5('$p')";
     $rs=$link->query($sql);
     $n=$rs->rowCount();
-    if($n>0)
+    if(strtoupper($_POST["captcha"])==strtoupper($_SESSION['vCode']))
     {
-        session_start();
-        $_SESSION['loginName']=$u;
-        echo '登陆成功！';
-        header('location:../userlist.php');
+        if($n>0)
+        {
+            $_SESSION['loginName']=$u;   //计入session,跨页面，默认20min时效。
+
+            header('location:../userlist.php');
+        }
+        else
+        {
+            $_SESSION['state_user_error']=true;
+
+            header('location:../error.php');
+        }
     }
     else
     {
-        echo '登陆失败！';
+        $_SESSION['state_captcha_error']=true;
+
+        header('location:../error.php');
     }
 ?>

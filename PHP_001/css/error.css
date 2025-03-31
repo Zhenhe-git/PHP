@@ -1,0 +1,13 @@
+/* 错误页面专属微调 */
+.logo:hover {
+    transform: rotate(360deg);
+    transition: transform 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+p::after {
+    content: " ";
+    display: block;
+    height: 2px;
+    width: 80px;
+    background: rgba(255,99,71,0.3);
+    margin: 1rem auto;
+}

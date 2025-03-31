@@ -26,3 +26,8 @@
 {
     cursor: url('../cursor/link.cur'), auto;
 }
+
+#captcha
+{
+    margin-top: 14px;
+}

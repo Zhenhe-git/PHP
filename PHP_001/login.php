@@ -31,6 +31,11 @@
                 <span class="toggle-password">️</span>
             </div>
 
+            <div class="form-group password-container">
+                <input type="text" id="yzm" placeholder="验证码" name="captcha" required>
+                <img id="captcha" src="public/code.php" alt="" onclick="this.src='public/code.php?rand='+Math.random();">
+            </div>
+
             <input class="submit" type="submit" value="登录系统">
         </form>
 
