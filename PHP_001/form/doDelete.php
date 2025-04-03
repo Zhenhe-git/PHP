@@ -3,9 +3,13 @@
 
     include_once '../public/sql_link.php';
 
-    $sql_1="delete from users where uid={$uid}";
-    $result=$link->exec($sql_1);
-    if($result)
+    $sql_1="delete from users where uid=?";
+
+    $rs=$link->prepare($sql_1);
+    $rs->bindParam(1,$uid);
+
+    $rs->execute();
+    if($rs->errorCode()==0)
     {
         echo "记录删除成功！";
     }

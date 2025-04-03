@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50533
 File Encoding         : 65001
 
-Date: 2025-04-02 11:12:49
+Date: 2025-03-27 00:47:54
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -45,7 +45,7 @@ CREATE TABLE `users` (
   `time` date DEFAULT NULL,
   `img` char(50) NOT NULL,
   PRIMARY KEY (`uid`)
-) ENGINE=InnoDB AUTO_INCREMENT=34 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of users
@@ -58,4 +58,3 @@ INSERT INTO `users` VALUES ('24', 'QPP', 'abc123', 'QPP@qq.com', '男', '2025-03
 INSERT INTO `users` VALUES ('25', 'Zhenhe', 'Zhenhe123456', 'Zhenhe@163.com', '女', '2025-03-26', 'img/f_202503262203407122.jpg');
 INSERT INTO `users` VALUES ('29', 'CS', '123sss', 'CS@163.co', '女', '2025-03-26', 'img/f_202503270003506983.jpg');
 INSERT INTO `users` VALUES ('30', '用户007', '************', 'Michael@007.com', '男', '2025-03-26', 'img/f_202503270003197666.jpg');
-INSERT INTO `users` VALUES ('32', '我是', 'yonghu6', 'yonghu@qq.com', '男', '2025-04-02', 'img/f_202504021004262216.gif');
